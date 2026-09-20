@@ -38,18 +38,6 @@ export default function Home() {
       tech: ["LangChain", "ChromaDB", "OpenAI API"],
       github: "https://github.com/viben1zxx/2026-grade-agent",
     },
-    {
-      title: "Ad Automation SaaS",
-      description: "Advertising operations platform that streamlines campaign generation and budget allocation using generative AI.",
-      tech: ["PostgreSQL", "Meta Ads API", "Redis"],
-      github: "https://github.com/viben1zxx/ad-automation-saas",
-    },
-    {
-      title: "Python Sentinel Telemetry",
-      description: "Automated system monitoring tool tracking system health, detecting anomalous resource usage, and triggering alerts.",
-      tech: ["Psutil", "Webhooks", "JSON Logging"],
-      github: "https://github.com/viben1zxx/python_sentinel",
-    },
   ];
 
   return (
@@ -58,14 +46,14 @@ export default function Home() {
         
         {/* Navigation / Contact Bar */}
         <nav className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-4 border-b border-slate-800 pb-6">
-          <div className="text-emerald-400 font-mono text-sm tracking-wider">
+          <div className="text-emerald-400 font-mono text-sm tracking-wider font-bold">
             &lt;viben1zxx /&gt;
           </div>
           <div className="flex flex-wrap gap-4 text-sm font-medium">
-            <a href="mailto:dipesh4963@gmail.com" className="flex items-center gap-2 hover:text-emerald-400 transition-colors bg-slate-900 px-4 py-2 rounded-lg border border-slate-800">
+            <a href="mailto:dipesh4963@gmail.com" className="flex items-center gap-2 hover:text-emerald-400 transition-colors bg-slate-900/50 px-4 py-2 rounded-lg border border-slate-800">
               ✉️ dipesh4963@gmail.com
             </a>
-            <a href="tel:9826190018" className="flex items-center gap-2 hover:text-emerald-400 transition-colors bg-slate-900 px-4 py-2 rounded-lg border border-slate-800">
+            <a href="tel:9826190018" className="flex items-center gap-2 hover:text-emerald-400 transition-colors bg-slate-900/50 px-4 py-2 rounded-lg border border-slate-800">
               📞 9826190018
             </a>
           </div>
@@ -77,26 +65,58 @@ export default function Home() {
             Available for Global & South Korea Freelance Contracts
           </span>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white mb-6">
-            MLOps & AI Systems <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">Engineer</span>
+            Hi, I'm Dipesh. <br className="hidden md:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">MLOps & AI Systems Engineer.</span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed mb-8">
-            Specializing in containerized FastAPI microservices, PyTorch deep learning architectures, automated CI/CD pipelines, and autonomous SOC security automation. 
+          <p className="text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed mb-8">
+            I bridge the gap between experimental AI and production-ready software. With deep expertise in Python, PyTorch, and containerized microservices, I build scalable, secure, and automated systems for global enterprise clients.
           </p>
           
           <div className="flex flex-wrap gap-2">
-            {["Python 3.11", "PyTorch", "FastAPI", "Docker", "GitHub Actions", "Next.js"].map((tech) => (
-              <span key={tech} className="bg-slate-800/50 text-slate-300 text-xs font-semibold px-3 py-1.5 rounded-md border border-slate-700/50 backdrop-blur-sm">
+            {["Python 3.11", "PyTorch", "FastAPI", "Docker", "GitHub Actions", "Next.js", "TailwindCSS"].map((tech) => (
+               <span key={tech} className="bg-slate-800/50 text-slate-300 text-xs font-semibold px-3 py-1.5 rounded-md border border-slate-700/50">
                 {tech}
               </span>
             ))}
           </div>
         </header>
 
+        {/* Professional Experience & Expertise (NEW SECTION) */}
+        <section className="mb-24">
+          <h2 className="text-2xl font-bold tracking-tight text-white mb-8 flex items-center gap-3">
+            <span className="w-8 h-[1px] bg-emerald-500 inline-block"></span>
+            Professional Expertise & Services
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-slate-900/30 p-6 rounded-xl border border-slate-800/60">
+              <h3 className="text-emerald-400 font-bold mb-3 text-lg">⚙️ AI & MLOps Infrastructure</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Transforming raw machine learning models into robust, deployable APIs. Experience setting up automated CI/CD pipelines, Docker containerization, and rigorous GitHub Actions testing gates to ensure zero-downtime deployments.
+              </p>
+            </div>
+            
+            <div className="bg-slate-900/30 p-6 rounded-xl border border-slate-800/60">
+              <h3 className="text-emerald-400 font-bold mb-3 text-lg">🛡️ Cybersecurity Automation</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Developing autonomous SOC tools and threat intelligence engines. Capable of building systems that ingest logs, parse IOCs, and automate Tier-1 security triage to save enterprise teams hundreds of manual hours.
+              </p>
+            </div>
+
+            <div className="bg-slate-900/30 p-6 rounded-xl border border-slate-800/60">
+              <h3 className="text-emerald-400 font-bold mb-3 text-lg">🌐 Global Freelance Readiness</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Operating with the discipline expected by top-tier South Korean and international tech firms. I prioritize crystal-clear async communication, comprehensive documentation (READMEs/Swagger), and strict code hygiene.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Projects Grid */}
         <section>
           <h2 className="text-2xl font-bold tracking-tight text-white mb-8 flex items-center gap-3">
             <span className="w-8 h-[1px] bg-emerald-500 inline-block"></span>
-            Production Engineering Projects
+            Featured Engineering Projects
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -126,8 +146,8 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="border-t border-slate-800/60 mt-24 pt-8 pb-12 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm gap-4">
-          <p>© {new Date().getFullYear()} Engineered by Dipesh. Deployed via Vercel.</p>
-          <p>Ready to scale your infrastructure? <a href="mailto:dipesh4963@gmail.com" className="text-emerald-400 hover:underline">Let's talk.</a></p>
+          <p>© {new Date().getFullYear()} Dipesh. Engineered for scale. Deployed via Vercel.</p>
+          <p>Ready to build? <a href="mailto:dipesh4963@gmail.com" className="text-emerald-400 font-bold hover:underline">Let's talk.</a></p>
         </footer>
       </div>
     </main>
